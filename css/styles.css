@@ -1,0 +1,208 @@
+* {
+    --size-var: 22px;
+    --button-size-var: 24px;
+    --button-bg-size-var: 22px;
+}
+
+html {
+    min-width: 320px;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-logo {
+    float: none;
+
+    position: relative !important;
+    left: 0 !important;
+}
+
+.cards-list {
+    list-style: none;
+    padding: 0 !important;
+    margin-bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+.card {
+    margin-bottom: 30px;
+    max-width: calc((100% - 20px)/2);
+}
+
+.full-img {
+    max-width: 100%;
+    /* max-height: 600px; */
+}
+
+.card:nth-child(odd) {
+    margin-right: 20px;
+}
+
+.card-content {
+    font-size: calc(0.8*var(--size-var));
+}
+
+.card-date {
+    display: block;
+    width: 50%;
+    margin-top: 30px;
+    padding-top: 7px;
+    border-top: 0.1px solid gray;
+}
+
+.card-name {
+    font-size: calc(0.8*var(--size-var));
+}
+
+.card-action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-likes {
+    font-size: calc(1.2*var(--size-var));
+}
+
+.like-button {
+    margin-right: 10px;
+    margin-top: 1.5px;
+
+    width: var(--size-var);
+    height: var(--size-var);
+
+    background-image: url('../images/test.png');
+    background-size: var(--size-var) var(--size-var);
+    background-position: bottom left;
+    background-color: rgba(255, 255, 255, 1);
+
+    border: none;
+
+    cursor: pointer;
+}
+.like-button:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.like-button:hover {
+    background-color: rgba(240, 122, 159, 0.4);
+}
+
+.like-button:active,
+.liked {
+    background-image: url('../images/like_set.svg');
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.like-button.liked:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.header-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    margin-top: 9px !important;
+}
+
+.search-field {
+    margin-top: 6px;
+    padding: 0 10px;
+
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+.search {
+    display: block;
+
+    margin-bottom: 0 !important;
+
+    border-bottom: none !important;
+
+    max-width: 12em !important;
+    /* min-width: 100px; */
+}
+
+.search-button {
+    width: var(--button-size-var);
+    height: var(--button-size-var);
+
+    padding: 0;
+    margin: 9px 0px 0 0;
+
+    background-color: inherit;
+    background-image: url(../images/search-icon.png);
+    background-repeat: no-repeat;
+    background-size: var(--button-bg-size-var);
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.search-button:active,
+.search-button:focus {
+    background-color: inherit;
+}
+
+@media (max-width: 650px) {
+    .search {
+        max-width: 8em !important;
+    }
+
+    .cards-list {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .card:nth-child(odd) {
+        margin-right: 0;
+    }
+
+    .header-item {
+        margin-top: 6px !important;
+    }
+}
+
+@media (max-width: 440px) {
+    .brand-logo {
+        max-width: 5em;
+    }
+
+    .brand-logo i {
+        font-size: 16px;
+        margin-right: 0 !important;
+    }
+
+    .search {
+        max-width: 3.4em !important;
+    }
+
+    .search-button {
+        margin-top: 11px;
+    }
+
+    * {
+        --button-bg-size-var: 18px;
+    }
+}
