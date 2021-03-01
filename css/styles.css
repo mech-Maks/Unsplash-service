@@ -90,6 +90,7 @@ html {
     background-size: var(--size-var) var(--size-var);
     background-position: bottom left;
     background-color: rgba(255, 255, 255, 1);
+    background-repeat: no-repeat;
 
     border: none;
 
@@ -107,6 +108,7 @@ html {
 .liked {
     background-image: url('../images/like_set.svg');
     background-color: rgba(255, 255, 255, 1);
+    background-repeat: no-repeat;
 }
 
 .like-button.liked:hover {
